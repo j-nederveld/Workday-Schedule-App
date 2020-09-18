@@ -69,3 +69,22 @@ textarea{
   font-size: 20px;
   transition: all .3s ease-in-out;
 }
+
+#innerContainer {
+  margin-bottom: 2rem;
+}
+
+
+/* this was initially set to 4.5, which was too wide on mobile. 3.5 looks nice on all vw */
+.display-3 {
+  font-size: 3.5rem;
+}
+
+/* fix mobile UI, for screens 767px and smaller the hour label will move to the top of the row, and the textarea/button will stretch to fill the empty space */
+@media only screen and (max-width: 767px) {
+  .saveBtn {
+    flex: 0 0 16.666667%;
+    max-width: 16.666667%;;
+  }
+}
+

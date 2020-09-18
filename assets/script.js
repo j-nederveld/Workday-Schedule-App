@@ -29,7 +29,7 @@ var hourContainer
 
   //give each "letterBtn" the following classes: "letter-button" "letter" "letter-button-color".
         hourRow.addClass("row hour form")
-        hourCol.addClass("col-1")
+        hourCol.addClass("col-md-1 hourCol")
         textArea.addClass("col-10 textArea")
         textArea.attr('id', parseInt(i + 9));
         saveText.addClass("col-1 saveBtn")
@@ -42,7 +42,6 @@ var hourContainer
 
   //add the hour variable to the correct row
         hourCol.text(hours[i])
-
   //add the row to our inner container, and then add each column to that row
           $("#innerContainer").append(hourRow);
           hourRow.append($(hourCol));
@@ -54,7 +53,7 @@ var hourContainer
         if (parseInt(textArea.attr("data-hour")) > currentHour) {
             textArea.addClass("future");
           }
-        if (textArea.attr("data-hour") === currentHour) {
+        if (parseInt(textArea.attr("data-hour")) == currentHour) {
           textArea.addClass("present");
         }
          if (parseInt(textArea.attr("data-hour")) < currentHour) {
