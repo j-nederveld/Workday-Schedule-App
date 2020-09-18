@@ -34,7 +34,7 @@ var hourContainer
         saveText.addClass("col-1 saveBtn")
 
       //give each "hourRow" an attribute called "data-hour", with a value eqaual to "hours[i]"
-        // textArea.attr("data-hour", parseInt(i + 9));
+         textArea.attr("data-hour", parseInt(i + 9));
         // saveText.attr("data-hour", parseInt(i + 9));
         hourRow.attr("data-hour", parseInt(i + 9));
 
