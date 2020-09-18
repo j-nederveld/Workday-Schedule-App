@@ -10,4 +10,5 @@ Based on the current time, hours that have already passed will be greyed out. Th
 
 
 
-
+repository: https://github.com/j-nederveld/Workday-Schedule-App
+deployed app: https://j-nederveld.github.io/Workday-Schedule-App/
