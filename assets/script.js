@@ -25,6 +25,7 @@ var hourContainer
         let hourCol = $("<div>");
         let textArea = $("<textarea>");
         let saveText = $("<button>");
+        let icon = $("<i>");
 
       //give each "letterBtn" the following classes: "letter-button" "letter" "letter-button-color".
         hourRow.addClass("row hour form")
@@ -32,6 +33,7 @@ var hourContainer
         textArea.addClass("col-10 textArea")
         textArea.attr('id', parseInt(i + 9));
         saveText.addClass("col-1 saveBtn")
+        icon.addClass("fas fa-save")
 
       //give each "hourRow" an attribute called "data-hour", with a value eqaual to "hours[i]"
          textArea.attr("data-hour", parseInt(i + 9));
@@ -48,7 +50,7 @@ var hourContainer
           hourRow.append($(hourCol));
           hourRow.append($(textArea));
           hourRow.append($(saveText));
-          saveText.text("");
+          saveText.append(icon);
 
         if (parseInt(textArea.attr("data-hour")) > currentHour) {
             textArea.addClass("future");
