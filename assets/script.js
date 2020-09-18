@@ -3,7 +3,7 @@ var currentDate = moment().format("dddd, MMMM Do" );
 
   // get hour
 var currentHour = moment().format("HH");
-console.log(currentHour);
+
   //define some global variables so they can be manipulated throughout the code
 var savedContent = [];
 let hourRow = '';
@@ -36,7 +36,7 @@ var hourContainer
         icon.addClass("fas fa-save")
 
   //give each "hourRow" an attribute called "data-hour", with a value eqaual to "hours[i]"
-         textArea.attr("data-hour", parseInt(i + 9));
+        textArea.attr("data-hour", parseInt(i + 9));
   // saveText.attr("data-hour", parseInt(i + 9));
         hourRow.attr("data-hour", parseInt(i + 9));
 
@@ -77,7 +77,7 @@ var hourContainer
       }
 
   //submit the form and save the text content for that hour
-  $(".form").submit(function(e) {
+  $('body').on('submit', '.form', function(e) {
     e.preventDefault();
   //get the hour that is being manipulated by accessing the data-hour attribute
     var current = $(this).attr("data-hour");
